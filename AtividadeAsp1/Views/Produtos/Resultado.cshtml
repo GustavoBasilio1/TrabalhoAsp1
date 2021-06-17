@@ -1,0 +1,56 @@
+﻿@model AtividadeAsp1.Models.Produtos
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Listar dados dos produtos</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <lengend>Dados dos produtos</lengend>
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Codigo)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Codigo)
+        </div>
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Nome)
+        </div>
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Descricao)
+        </div>
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Peso)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Peso)
+        </div>
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.Categoria)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Categoria)
+        </div>
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.ValorUnitario)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.ValorUnitario)
+        </div>
+        <p>@Html.ActionLink("Voltar", "Index")</p>
+        }
+    </fieldset>
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval");
+    }
+}
+
+
